@@ -1,0 +1,1528 @@
+Build a polished, responsive physiotherapy website based on the supplied Lynch Physiotherapy & Wellness branding and logo.
+
+The finished site should closely match the visual style of the provided concept image: clean, premium, clinical but welcoming, with lots of white space, teal branding, pale aqua section backgrounds, rounded cards, subtle shadows, and strong appointment CTAs.
+
+IMPORTANT:
+- The existing Lynch Physiotherapy & Wellness logo is already available in the project directory. Find and use that asset rather than recreating the logo in CSS/text.
+- Preserve the logo proportions and do not distort it.
+- Build this as a real responsive website, not a static screenshot.
+- It should look excellent on desktop, tablet and mobile.
+- Use semantic HTML and accessible controls.
+- All navigation should work as page anchors for now.
+- The “Book an Appointment” buttons should link to a configurable external booking URL.
+- Keep all business details in an easy-to-edit config/data object rather than scattering them throughout components.
+
+DESIGN DIRECTION
+
+Overall visual style:
+- Modern private healthcare / physiotherapy clinic.
+- Bright, clean, calm and professional.
+- White is the dominant background.
+- Teal is the main brand colour.
+- Very pale blue/teal backgrounds should differentiate sections.
+- Dark navy/charcoal text rather than pure black.
+- Use generous vertical spacing.
+- Rounded rectangular cards.
+- Fine borders with very subtle blue-grey tones.
+- Soft box shadows only where useful.
+- Avoid anything that looks overly corporate or like an NHS website.
+- It should feel like a premium independent physiotherapy practice.
+
+COLOUR PALETTE
+
+Use these colours consistently as CSS variables:
+
+--brand-teal: #007F87;
+--brand-teal-dark: #00646C;
+--brand-teal-deep: #00535A;
+--brand-aqua: #27A5AA;
+--brand-mint: #DFF3F4;
+--brand-mint-light: #EFF9FA;
+--brand-pale: #F5FBFC;
+
+--navy: #092C3C;
+--text-primary: #102E3B;
+--text-secondary: #506773;
+--text-muted: #70858F;
+
+--white: #FFFFFF;
+--off-white: #FCFEFE;
+--border: #D9EAEC;
+--border-light: #E8F2F3;
+
+--star: #FFB21A;
+
+The teal should be similar to the supplied logo. If the exact logo colours differ slightly, visually match the website accents to the logo rather than forcing an obviously different teal.
+
+TYPOGRAPHY
+
+Use a clean modern sans-serif such as:
+- Inter
+- Manrope
+- DM Sans
+- or similar
+
+Headings:
+- Heavy but refined.
+- Approximately font-weight 700–800.
+- Dark navy.
+- Important highlighted words can be teal.
+
+Body:
+- 400–500 weight.
+- Comfortable line height around 1.6.
+- Dark grey-blue.
+
+Small overline text:
+- Uppercase.
+- Wide letter spacing.
+- Dark navy or teal.
+- Around 12–14px desktop.
+
+For the handwritten phrases such as “Move Better, Live Brighter”, use a tasteful script font if available, but keep it subtle and readable.
+
+PAGE STRUCTURE
+
+1. HEADER / NAVIGATION
+
+Desktop header:
+- White background.
+- Sticky or fixed-on-scroll is preferred.
+- Thin subtle bottom border or shadow when scrolled.
+- Maximum content width around 1400px.
+- Left: Lynch Physiotherapy & Wellness logo.
+- Centre/right navigation:
+  - Home
+  - About
+  - Services
+  - Conditions
+  - Prices
+  - FAQs
+  - Contact
+- Far right: prominent teal pill-shaped button:
+  “Book an Appointment”
+- Button should contain a small calendar icon.
+
+Active link:
+- Teal text.
+- Small teal underline underneath.
+
+Mobile:
+- Logo on left.
+- Hamburger button on right.
+- Slide-down or drawer navigation.
+- Booking CTA remains obvious.
+
+2. HERO SECTION
+
+Desktop layout:
+- Two-column section, roughly 50/50.
+- Left side contains marketing text.
+- Right side contains a large physiotherapy treatment photograph.
+- Overall hero height approximately 650–750px on large desktop.
+- White / very pale gradient background.
+
+Left hero content:
+
+Small overline:
+“MOVE BETTER • FEEL STRONGER • LIVE WELL”
+
+Main heading:
+“Expert Physiotherapy
+for a Healthier,
+Happier You”
+
+Formatting:
+- “Expert Physiotherapy” in dark navy.
+- “for a Healthier,” and/or “Happier You” in teal.
+- Large display size around 64–72px on desktop.
+- Responsive clamp() sizing on smaller screens.
+
+Paragraph:
+“Personalised, evidence-based care to help you recover, restore movement and enhance your overall wellbeing.”
+
+CTA row:
+Primary teal button:
+“Book an Appointment”
+
+Secondary outlined button:
+“Learn More”
+- white background
+- teal border
+- teal text
+- small right arrow
+
+Below buttons:
+Three small icon/value items arranged horizontally:
+- Personalised Care
+- Restore Movement
+- Enhance Wellbeing
+
+Each item:
+- Circular pale-aqua icon container.
+- Teal line icon.
+- Short two-line caption beneath.
+
+Hero image:
+- Use a professional image of a female physiotherapist treating a patient’s knee/leg in a modern clinic.
+- Image should fill the right side cleanly.
+- Use object-fit: cover.
+- On desktop it can bleed toward the page edge.
+- Add a very subtle fade into the white hero on its left edge if practical.
+
+Optional script text overlay on image:
+“Move
+Better
+Live
+Brighter”
+
+Use teal handwritten styling near upper-right.
+
+3. SERVICES SECTION
+
+Background:
+- Very pale blue/teal gradient:
+  white into #EFF9FA.
+
+Centered heading content:
+Small overline:
+“OUR SERVICES”
+
+Title:
+“How We Can Help”
+
+Intro:
+“A range of physiotherapy and wellness services tailored to your goals, whether you're recovering from injury, managing a long-term condition, or simply want to move and feel better.”
+
+Grid:
+- 3 columns x 2 rows desktop.
+- 2 columns tablet.
+- 1 column mobile.
+
+Service cards:
+White background.
+Rounded 12–16px.
+1px pale border.
+Very soft shadow.
+Padding ~28–32px.
+
+Each card contains:
+- Circular pale teal icon area.
+- Teal icon.
+- Bold service title.
+- Short supporting description.
+
+Cards:
+
+1.
+Title:
+“Musculoskeletal Physiotherapy”
+Description:
+“Assessment and treatment for aches, pains and injuries affecting muscles, joints and bones.”
+
+2.
+Title:
+“Sports Injuries”
+Description:
+“Get back to doing what you love with tailored rehabilitation programmes.”
+
+3.
+Title:
+“Rehabilitation”
+Description:
+“Structured recovery plans following surgery, injury or illness.”
+
+4.
+Title:
+“Wellbeing & Prevention”
+Description:
+“Stay active, reduce the risk of injury and improve your long-term health.”
+
+5.
+Title:
+“Posture & Ergonomics”
+Description:
+“Assessment and advice to help you move better in everyday life.”
+
+6.
+Title:
+“Tailored Treatment Plans”
+Description:
+“Individualised care focused on your goals and lifestyle.”
+
+Use relevant line icons from Lucide, Heroicons or a similar library:
+- body / running / movement
+- spine
+- dumbbell
+- leaf
+- seated posture
+- hands / wellness
+
+4. ABOUT SECTION
+
+White background.
+
+Two-column layout.
+
+Left:
+Small overline:
+“ABOUT”
+
+Heading:
+“A Holistic Approach
+to Your Health”
+
+Make “Your Health” teal.
+
+Paragraph:
+“At Lynch Physiotherapy & Wellness, we believe in more than just treating the symptoms. Our approach is centred around understanding the root cause of your condition, so we can help you move better, feel stronger and live a healthier, more active life.”
+
+Checklist:
+Each line has small filled teal circle and white checkmark.
+
+Items:
+- Chartered Physiotherapist
+- Evidence-based treatment
+- Personalised care plans
+- Welcoming and professional environment
+
+Below:
+Script-style signature:
+“Hina Lynch”
+
+Underneath:
+“CHARTERED PHYSIOTHERAPIST”
+in tiny uppercase letter-spaced text.
+
+Right:
+Large image of a modern physio treatment room.
+Rounded corners around 18–24px.
+
+The image should show:
+- Treatment bed
+- Clean clinical room
+- Plant
+- Skeleton/spine model
+- Anatomy poster or similar
+
+Optional handwritten overlay:
+“Stronger
+Movement
+Happier
+You”
+
+Below or overlapping bottom edge of image:
+Large teal rounded stats/value bar containing three equal columns:
+- Personalised Care
+- Lasting Results
+- Support Every Step
+
+Each has:
+- white line icon
+- white text
+- thin vertical dividers between columns
+
+5. TESTIMONIALS SECTION
+
+Background:
+Very pale blue.
+
+Centered heading:
+Small overline:
+“TESTIMONIALS”
+
+Main heading:
+“What Our Clients Say”
+
+Three cards across desktop.
+
+Each card:
+- White
+- Rounded
+- Subtle border/shadow
+- Quote icon top-left in teal
+- Review text
+- 5 amber stars
+- Small circular initial avatar
+- Client first name + initial only
+
+Example reviews:
+
+James H.
+
+Sarah C.
+“After struggling with persistent back pain, I finally feel like myself again. The tailored exercises and advice have made such a difference.”
+
+Mark T.
+“Friendly, approachable and incredibly skilled. I’d highly recommend Lynch Physiotherapy to anyone.”
+
+Do not make testimonials overly tall. Keep each card similar height.
+
+6. LARGE CALL-TO-ACTION BANNER
+
+Full-width teal banner or photograph with teal overlay.
+
+Suggested background:
+Close-up lifestyle / running image with teal overlay.
+
+Content width:
+Same as site max width.
+
+Left:
+Small overline:
+“TAKE THE FIRST STEP”
+
+Heading:
+“Ready to Move Better?”
+
+Text:
+“Book your appointment today and start your journey to a healthier, stronger you.”
+
+Right:
+Large white pill button:
+“Book an Appointment”
+Calendar icon left, arrow right.
+
+Desktop:
+Text and button aligned horizontally.
+
+Mobile:
+Stack vertically.
+
+7. FOOTER
+
+White background.
+
+Four-column desktop structure.
+
+Column 1:
+Logo.
+Optional brief text.
+
+Column 2:
+Heading:
+“Quick Links”
+Links:
+Home
+About
+Services
+Conditions
+Prices
+FAQs
+Contact
+
+Column 3:
+Heading:
+“Contact”
+
+Use the current clinic details:
+Phone:
+07471 018457
+
+Email:
+info@lynchphysiotherapy.co.uk
+
+Address:
+Mitre House Kirkgate,
+Birstall, Batley WF17 9HE
+
+Use teal icons for phone, email, address.
+
+Column 4:
+Heading:
+“Follow Us”
+
+Circular teal social icons:
+Facebook
+Instagram
+
+Below or nearby:
+Handwritten teal phrase:
+“Move Better
+Live Brighter”
+
+Footer bottom row:
+Left:
+© Lynch Physiotherapy & Wellness. All rights reserved.
+
+Right:
+Privacy Policy
+Terms & Conditions
+
+Use current year dynamically rather than hardcoding 2024.
+
+PAGE WIDTH / SPACING
+
+Main max width:
+approximately 1320–1400px.
+
+Horizontal desktop padding:
+40–64px.
+
+Tablet:
+24–32px.
+
+Mobile:
+18–20px.
+
+Typical section vertical spacing:
+90–120px desktop.
+60–80px tablet.
+48–64px mobile.
+
+BORDER RADIUS
+
+Buttons:
+999px pill shape.
+
+Cards:
+14–18px.
+
+Large images:
+18–24px.
+
+Icon circles:
+50%.
+
+SHADOWS
+
+Keep shadows soft and premium, for example:
+
+box-shadow:
+0 10px 30px rgba(9, 44, 60, 0.06);
+
+Hover cards:
+0 16px 40px rgba(9, 44, 60, 0.10);
+
+Avoid strong grey drop shadows.
+
+INTERACTIONS
+
+Buttons:
+- Smooth hover transition.
+- Primary teal darkens slightly.
+- Secondary outline fills very pale teal.
+- Slight translateY(-1px) optional.
+
+Cards:
+- Slight lift on hover.
+- Border becomes slightly more teal.
+
+Navigation:
+- Smooth underline transition.
+
+Use:
+transition: 180ms–250ms ease.
+
+SCROLLING
+
+Enable:
+scroll-behavior: smooth;
+
+Header links should scroll to:
+#home
+#about
+#services
+#conditions
+#prices
+#faqs
+#contact
+
+For now, Conditions / Prices / FAQs can either:
+- have placeholder sections lower on the homepage, or
+- link to small dedicated homepage sections.
+
+Do not leave navigation links pointing to nowhere.
+
+EXTRA HOMEPAGE SECTIONS TO ADD
+
+The visual reference mainly shows Hero, Services, About and Testimonials, but the final website should also include these because they are needed for a proper clinic site:
+
+8. CONDITIONS WE TREAT
+
+Use a clean section between Services and About or after About.
+
+Heading:
+“Conditions We Treat”
+
+Use chips/cards for examples:
+- Back pain
+- Neck pain
+- Shoulder pain
+- Knee pain
+- Hip pain
+- Sports injuries
+- Sciatica
+- Joint pain
+- Post-operative rehabilitation
+- Tendon injuries
+- Muscle strains
+- Postural pain
+
+Add a note:
+“If you're unsure whether physiotherapy can help, get in touch and we’ll be happy to advise.”
+
+9. SESSION / TREATMENT OPTIONS
+
+Create a pricing-style section.
+
+Heading:
+“Appointments & Sessions”
+
+Cards could be:
+- Initial Physiotherapy Assessment
+- Follow-up Physiotherapy
+- Rehabilitation Session
+- Wellness / Movement Assessment
+
+For now, make prices editable placeholders such as:
+“£XX”
+
+Do not invent final clinic pricing unless values are supplied.
+
+Each card can contain:
+- Session length
+- Short description
+- Price placeholder
+- Book button
+
+10. FAQs
+
+Accordion design.
+
+Example questions:
+- What should I expect at my first appointment?
+- What should I wear?
+- How long does a physiotherapy session last?
+- Do I need a GP referral?
+- How many sessions will I need?
+- Can I book directly online?
+- What conditions do you treat?
+- Where are you based?
+
+Make the accordion accessible with keyboard support and aria-expanded.
+
+11. CONTACT SECTION
+
+Before the final CTA or footer.
+
+Two columns.
+
+Left:
+Contact details.
+
+Right:
+Simple contact form:
+- Name
+- Email
+- Phone
+- Message
+- Send enquiry
+
+For now the form can be frontend-only but structure it so a backend/API integration can be added later.
+
+Include:
+“Prefer to book online?”
+and a Book Appointment button.
+
+BOOKING URL
+
+Create a central constant/environment variable, for example:
+
+const BOOKING_URL = 'https://replace-with-booking-link.example';
+
+or:
+NEXT_PUBLIC_BOOKING_URL
+
+Every Book an Appointment button should use the same value.
+
+Do not hard-code the URL independently in each component.
+
+COMPONENT STRUCTURE
+
+If using React / Next.js, organise the site into reusable components such as:
+
+components/
+  Header.tsx
+  Hero.tsx
+  ValuePoints.tsx
+  Services.tsx
+  Conditions.tsx
+  About.tsx
+  SessionPricing.tsx
+  Testimonials.tsx
+  FAQ.tsx
+  Contact.tsx
+  CTA.tsx
+  Footer.tsx
+  SectionHeading.tsx
+  Button.tsx
+
+data/
+  site.ts
+  services.ts
+  testimonials.ts
+  faqs.ts
+
+Keep business information in site.ts:
+
+export const siteConfig = {
+  businessName: 'Lynch Physiotherapy & Wellness',
+  practitioner: 'Hina Lynch',
+  qualification: 'Chartered Physiotherapist',
+  phone: '07471 018457',
+  email: 'info@lynchphysiotherapy.co.uk',
+  address: 'Mitre House Kirkgate, Birstall, Batley WF17 9HE',
+  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || '#'
+}
+
+ASSETS
+
+Search the project directory for the supplied Lynch Physiotherapy & Wellness logo and use it in:
+- Header
+- Footer
+
+Create a sensible assets structure if one does not exist:
+
+public/
+  images/
+    logo.*
+    hero-physio.*
+    clinic-room.*
+    cta-background.*
+
+Do not generate a fake replacement logo if the existing logo asset is present.
+
+If appropriate image assets are not yet supplied, use temporary high-quality placeholder images and clearly name them so they can easily be replaced later.
+
+RESPONSIVE BEHAVIOUR
+
+Desktop 1200px+:
+- Full navigation.
+- 2-column hero.
+- 3-column service/testimonial grids.
+
+Tablet 768px–1199px:
+- Reduce hero heading.
+- Still allow 2-column hero where space permits.
+- Service grid 2 columns.
+- Footer 2 columns.
+
+Mobile under 768px:
+- Hamburger nav.
+- Hero stacks text above image.
+- Buttons either stacked or full-width.
+- Icon benefits can become vertical or 3 narrow columns if readable.
+- All card grids 1 column.
+- About image underneath text.
+- CTA stacks.
+- Footer single column or 2 compact columns.
+- Ensure no horizontal overflow.
+
+ACCESSIBILITY
+
+- Proper heading hierarchy.
+- Alt text for images.
+- Visible focus styles.
+- Buttons and links keyboard accessible.
+- Minimum 44px touch targets.
+- Colour contrast suitable for WCAG AA.
+- Form labels should not rely only on placeholders.
+- Mobile menu should support keyboard navigation and Escape closing.
+
+SEO
+
+Add metadata:
+Title:
+“Lynch Physiotherapy & Wellness | Chartered Physiotherapist in Birstall”
+
+Description:
+“Personalised physiotherapy, rehabilitation and wellbeing support from Lynch Physiotherapy & Wellness in Birstall, Batley.”
+
+Add suitable OpenGraph metadata structure.
+
+PERFORMANCE
+
+- Optimise images.
+- Lazy-load below-the-fold images.
+- Avoid large unnecessary animation libraries.
+- Use CSS transitions for subtle motion.
+- Aim for very good Lighthouse scores.
+
+FINAL VISUAL TARGET
+
+The site should feel very close to the supplied concept:
+- crisp white background
+- deep navy headings
+- distinctive Lynch teal
+- generous spacing
+- rounded clinical imagery
+- polished service cards
+- clear appointment CTAs
+- reassuring but premium visual tone
+
+It should feel like a real £2,000–£5,000 custom-designed private physiotherapy website rather than a generic template.
+Build a polished, responsive physiotherapy website based on the supplied Lynch Physiotherapy & Wellness branding and logo.
+
+The finished site should closely match the visual style of the provided concept image: clean, premium, clinical but welcoming, with lots of white space, teal branding, pale aqua section backgrounds, rounded cards, subtle shadows, and strong appointment CTAs.
+
+IMPORTANT:
+- The existing Lynch Physiotherapy & Wellness logo is already available in the project directory. Find and use that asset rather than recreating the logo in CSS/text.
+- Preserve the logo proportions and do not distort it.
+- Build this as a real responsive website, not a static screenshot.
+- It should look excellent on desktop, tablet and mobile.
+- Use semantic HTML and accessible controls.
+- All navigation should work as page anchors for now.
+- The “Book an Appointment” buttons should link to a configurable external booking URL.
+- Keep all business details in an easy-to-edit config/data object rather than scattering them throughout components.
+
+DESIGN DIRECTION
+
+Overall visual style:
+- Modern private healthcare / physiotherapy clinic.
+- Bright, clean, calm and professional.
+- White is the dominant background.
+- Teal is the main brand colour.
+- Very pale blue/teal backgrounds should differentiate sections.
+- Dark navy/charcoal text rather than pure black.
+- Use generous vertical spacing.
+- Rounded rectangular cards.
+- Fine borders with very subtle blue-grey tones.
+- Soft box shadows only where useful.
+- Avoid anything that looks overly corporate or like an NHS website.
+- It should feel like a premium independent physiotherapy practice.
+
+COLOUR PALETTE
+
+Use these colours consistently as CSS variables:
+
+--brand-teal: #007F87;
+--brand-teal-dark: #00646C;
+--brand-teal-deep: #00535A;
+--brand-aqua: #27A5AA;
+--brand-mint: #DFF3F4;
+--brand-mint-light: #EFF9FA;
+--brand-pale: #F5FBFC;
+
+--navy: #092C3C;
+--text-primary: #102E3B;
+--text-secondary: #506773;
+--text-muted: #70858F;
+
+--white: #FFFFFF;
+--off-white: #FCFEFE;
+--border: #D9EAEC;
+--border-light: #E8F2F3;
+
+--star: #FFB21A;
+
+The teal should be similar to the supplied logo. If the exact logo colours differ slightly, visually match the website accents to the logo rather than forcing an obviously different teal.
+
+TYPOGRAPHY
+
+Use a clean modern sans-serif such as:
+- Inter
+- Manrope
+- DM Sans
+- or similar
+
+Headings:
+- Heavy but refined.
+- Approximately font-weight 700–800.
+- Dark navy.
+- Important highlighted words can be teal.
+
+Body:
+- 400–500 weight.
+- Comfortable line height around 1.6.
+- Dark grey-blue.
+
+Small overline text:
+- Uppercase.
+- Wide letter spacing.
+- Dark navy or teal.
+- Around 12–14px desktop.
+
+For the handwritten phrases such as “Move Better, Live Brighter”, use a tasteful script font if available, but keep it subtle and readable.
+
+PAGE STRUCTURE
+
+1. HEADER / NAVIGATION
+
+Desktop header:
+- White background.
+- Sticky or fixed-on-scroll is preferred.
+- Thin subtle bottom border or shadow when scrolled.
+- Maximum content width around 1400px.
+- Left: Lynch Physiotherapy & Wellness logo.
+- Centre/right navigation:
+  - Home
+  - About
+  - Services
+  - Conditions
+  - Prices
+  - FAQs
+  - Contact
+- Far right: prominent teal pill-shaped button:
+  “Book an Appointment”
+- Button should contain a small calendar icon.
+
+Active link:
+- Teal text.
+- Small teal underline underneath.
+
+Mobile:
+- Logo on left.
+- Hamburger button on right.
+- Slide-down or drawer navigation.
+- Booking CTA remains obvious.
+
+2. HERO SECTION
+
+Desktop layout:
+- Two-column section, roughly 50/50.
+- Left side contains marketing text.
+- Right side contains a large physiotherapy treatment photograph.
+- Overall hero height approximately 650–750px on large desktop.
+- White / very pale gradient background.
+
+Left hero content:
+
+Small overline:
+“MOVE BETTER • FEEL STRONGER • LIVE WELL”
+
+Main heading:
+“Expert Physiotherapy
+for a Healthier,
+Happier You”
+
+Formatting:
+- “Expert Physiotherapy” in dark navy.
+- “for a Healthier,” and/or “Happier You” in teal.
+- Large display size around 64–72px on desktop.
+- Responsive clamp() sizing on smaller screens.
+
+Paragraph:
+“Personalised, evidence-based care to help you recover, restore movement and enhance your overall wellbeing.”
+
+CTA row:
+Primary teal button:
+“Book an Appointment”
+
+Secondary outlined button:
+“Learn More”
+- white background
+- teal border
+- teal text
+- small right arrow
+
+Below buttons:
+Three small icon/value items arranged horizontally:
+- Personalised Care
+- Restore Movement
+- Enhance Wellbeing
+
+Each item:
+- Circular pale-aqua icon container.
+- Teal line icon.
+- Short two-line caption beneath.
+
+Hero image:
+- Use a professional image of a female physiotherapist treating a patient’s knee/leg in a modern clinic.
+- Image should fill the right side cleanly.
+- Use object-fit: cover.
+- On desktop it can bleed toward the page edge.
+- Add a very subtle fade into the white hero on its left edge if practical.
+
+Optional script text overlay on image:
+“Move
+Better
+Live
+Brighter”
+
+Use teal handwritten styling near upper-right.
+
+3. SERVICES SECTION
+
+Background:
+- Very pale blue/teal gradient:
+  white into #EFF9FA.
+
+Centered heading content:
+Small overline:
+“OUR SERVICES”
+
+Title:
+“How We Can Help”
+
+Intro:
+“A range of physiotherapy and wellness services tailored to your goals, whether you're recovering from injury, managing a long-term condition, or simply want to move and feel better.”
+
+Grid:
+- 3 columns x 2 rows desktop.
+- 2 columns tablet.
+- 1 column mobile.
+
+Service cards:
+White background.
+Rounded 12–16px.
+1px pale border.
+Very soft shadow.
+Padding ~28–32px.
+
+Each card contains:
+- Circular pale teal icon area.
+- Teal icon.
+- Bold service title.
+- Short supporting description.
+
+Cards:
+
+1.
+Title:
+“Musculoskeletal Physiotherapy”
+Description:
+“Assessment and treatment for aches, pains and injuries affecting muscles, joints and bones.”
+
+2.
+Title:
+“Sports Injuries”
+Description:
+“Get back to doing what you love with tailored rehabilitation programmes.”
+
+3.
+Title:
+“Rehabilitation”
+Description:
+“Structured recovery plans following surgery, injury or illness.”
+
+4.
+Title:
+“Wellbeing & Prevention”
+Description:
+“Stay active, reduce the risk of injury and improve your long-term health.”
+
+5.
+Title:
+“Posture & Ergonomics”
+Description:
+“Assessment and advice to help you move better in everyday life.”
+
+6.
+Title:
+“Tailored Treatment Plans”
+Description:
+“Individualised care focused on your goals and lifestyle.”
+
+Use relevant line icons from Lucide, Heroicons or a similar library:
+- body / running / movement
+- spine
+- dumbbell
+- leaf
+- seated posture
+- hands / wellness
+
+4. ABOUT SECTION
+
+White background.
+
+Two-column layout.
+
+Left:
+Small overline:
+“ABOUT”
+
+Heading:
+“A Holistic Approach
+to Your Health”
+
+Make “Your Health” teal.
+
+Paragraph:
+“At Lynch Physiotherapy & Wellness, we believe in more than just treating the symptoms. Our approach is centred around understanding the root cause of your condition, so we can help you move better, feel stronger and live a healthier, more active life.”
+
+Checklist:
+Each line has small filled teal circle and white checkmark.
+
+Items:
+- Chartered Physiotherapist
+- Evidence-based treatment
+- Personalised care plans
+- Welcoming and professional environment
+
+Below:
+Script-style signature:
+“Hina Lynch”
+
+Underneath:
+“CHARTERED PHYSIOTHERAPIST”
+in tiny uppercase letter-spaced text.
+
+Right:
+Large image of a modern physio treatment room.
+Rounded corners around 18–24px.
+
+The image should show:
+- Treatment bed
+- Clean clinical room
+- Plant
+- Skeleton/spine model
+- Anatomy poster or similar
+
+Optional handwritten overlay:
+“Stronger
+Movement
+Happier
+You”
+
+Below or overlapping bottom edge of image:
+Large teal rounded stats/value bar containing three equal columns:
+- Personalised Care
+- Lasting Results
+- Support Every Step
+
+Each has:
+- white line icon
+- white text
+- thin vertical dividers between columns
+
+5. TESTIMONIALS SECTION
+
+Background:
+Very pale blue.
+
+Centered heading:
+Small overline:
+“TESTIMONIALS”
+
+Main heading:
+“What Our Clients Say”
+
+Three cards across desktop.
+
+Each card:
+- White
+- Rounded
+- Subtle border/shadow
+- Quote icon top-left in teal
+- Review text
+- 5 amber stars
+- Small circular initial avatar
+- Client first name + initial only
+
+Example reviews:
+
+James H.
+
+Sarah C.
+“After struggling with persistent back pain, I finally feel like myself again. The tailored exercises and advice have made such a difference.”
+
+Mark T.
+“Friendly, approachable and incredibly skilled. I’d highly recommend Lynch Physiotherapy to anyone.”
+
+Do not make testimonials overly tall. Keep each card similar height.
+
+6. LARGE CALL-TO-ACTION BANNER
+
+Full-width teal banner or photograph with teal overlay.
+
+Suggested background:
+Close-up lifestyle / running image with teal overlay.
+
+Content width:
+Same as site max width.
+
+Left:
+Small overline:
+“TAKE THE FIRST STEP”
+
+Heading:
+“Ready to Move Better?”
+
+Text:
+“Book your appointment today and start your journey to a healthier, stronger you.”
+
+Right:
+Large white pill button:
+“Book an Appointment”
+Calendar icon left, arrow right.
+
+Desktop:
+Text and button aligned horizontally.
+
+Mobile:
+Stack vertically.
+
+7. FOOTER
+
+White background.
+
+Four-column desktop structure.
+
+Column 1:
+Logo.
+Optional brief text.
+
+Column 2:
+Heading:
+“Quick Links”
+Links:
+Home
+About
+Services
+Conditions
+Prices
+FAQs
+Contact
+
+Column 3:
+Heading:
+“Contact”
+
+Use the current clinic details:
+Phone:
+07471 018457
+
+Email:
+info@lynchphysiotherapy.co.uk
+
+Address:
+Mitre House Kirkgate,
+Birstall, Batley WF17 9HE
+
+Use teal icons for phone, email, address.
+
+Column 4:
+Heading:
+“Follow Us”
+
+Circular teal social icons:
+Facebook
+Instagram
+
+Below or nearby:
+Handwritten teal phrase:
+“Move Better
+Live Brighter”
+
+Footer bottom row:
+Left:
+© Lynch Physiotherapy & Wellness. All rights reserved.
+
+Right:
+Privacy Policy
+Terms & Conditions
+
+Use current year dynamically rather than hardcoding 2024.
+
+PAGE WIDTH / SPACING
+
+Main max width:
+approximately 1320–1400px.
+
+Horizontal desktop padding:
+40–64px.
+
+Tablet:
+24–32px.
+
+Mobile:
+18–20px.
+
+Typical section vertical spacing:
+90–120px desktop.
+60–80px tablet.
+48–64px mobile.
+
+BORDER RADIUS
+
+Buttons:
+999px pill shape.
+
+Cards:
+14–18px.
+
+Large images:
+18–24px.
+
+Icon circles:
+50%.
+
+SHADOWS
+
+Keep shadows soft and premium, for example:
+
+box-shadow:
+0 10px 30px rgba(9, 44, 60, 0.06);
+
+Hover cards:
+0 16px 40px rgba(9, 44, 60, 0.10);
+
+Avoid strong grey drop shadows.
+
+INTERACTIONS
+
+Buttons:
+- Smooth hover transition.
+- Primary teal darkens slightly.
+- Secondary outline fills very pale teal.
+- Slight translateY(-1px) optional.
+
+Cards:
+- Slight lift on hover.
+- Border becomes slightly more teal.
+
+Navigation:
+- Smooth underline transition.
+
+Use:
+transition: 180ms–250ms ease.
+
+SCROLLING
+
+Enable:
+scroll-behavior: smooth;
+
+Header links should scroll to:
+#home
+#about
+#services
+#conditions
+#prices
+#faqs
+#contact
+
+For now, Conditions / Prices / FAQs can either:
+- have placeholder sections lower on the homepage, or
+- link to small dedicated homepage sections.
+
+Do not leave navigation links pointing to nowhere.
+
+EXTRA HOMEPAGE SECTIONS TO ADD
+
+The visual reference mainly shows Hero, Services, About and Testimonials, but the final website should also include these because they are needed for a proper clinic site:
+
+8. CONDITIONS WE TREAT
+
+Use a clean section between Services and About or after About.
+
+Heading:
+“Conditions We Treat”
+
+Use chips/cards for examples:
+- Back pain
+- Neck pain
+- Shoulder pain
+- Knee pain
+- Hip pain
+- Sports injuries
+- Sciatica
+- Joint pain
+- Post-operative rehabilitation
+- Tendon injuries
+- Muscle strains
+- Postural pain
+
+Add a note:
+“If you're unsure whether physiotherapy can help, get in touch and we’ll be happy to advise.”
+
+9. SESSION / TREATMENT OPTIONS
+
+Create a pricing-style section.
+
+Heading:
+“Appointments & Sessions”
+
+Cards could be:
+- Initial Physiotherapy Assessment
+- Follow-up Physiotherapy
+- Rehabilitation Session
+- Wellness / Movement Assessment
+
+For now, make prices editable placeholders such as:
+“£XX”
+
+Do not invent final clinic pricing unless values are supplied.
+
+Each card can contain:
+- Session length
+- Short description
+- Price placeholder
+- Book button
+
+10. FAQs
+
+Accordion design.
+
+Example questions:
+- What should I expect at my first appointment?
+- What should I wear?
+- How long does a physiotherapy session last?
+- Do I need a GP referral?
+- How many sessions will I need?
+- Can I book directly online?
+- What conditions do you treat?
+- Where are you based?
+
+Make the accordion accessible with keyboard support and aria-expanded.
+
+11. CONTACT SECTION
+
+Before the final CTA or footer.
+
+Two columns.
+
+Left:
+Contact details.
+
+Right:
+Simple contact form:
+- Name
+- Email
+- Phone
+- Message
+- Send enquiry
+
+For now the form can be frontend-only but structure it so a backend/API integration can be added later.
+
+Include:
+“Prefer to book online?”
+and a Book Appointment button.
+
+BOOKING URL
+
+Create a central constant/environment variable, for example:
+
+const BOOKING_URL = 'https://replace-with-booking-link.example';
+
+or:
+NEXT_PUBLIC_BOOKING_URL
+
+Every Book an Appointment button should use the same value.
+
+Do not hard-code the URL independently in each component.
+
+COMPONENT STRUCTURE
+
+If using React / Next.js, organise the site into reusable components such as:
+
+components/
+  Header.tsx
+  Hero.tsx
+  ValuePoints.tsx
+  Services.tsx
+  Conditions.tsx
+  About.tsx
+  SessionPricing.tsx
+  Testimonials.tsx
+  FAQ.tsx
+  Contact.tsx
+  CTA.tsx
+  Footer.tsx
+  SectionHeading.tsx
+  Button.tsx
+
+data/
+  site.ts
+  services.ts
+  testimonials.ts
+  faqs.ts
+
+Keep business information in site.ts:
+
+export const siteConfig = {
+  businessName: 'Lynch Physiotherapy & Wellness',
+  practitioner: 'Hina Lynch',
+  qualification: 'Chartered Physiotherapist',
+  phone: '07471 018457',
+  email: 'info@lynchphysiotherapy.co.uk',
+  address: 'Mitre House Kirkgate, Birstall, Batley WF17 9HE',
+  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || '#'
+}
+
+ASSETS
+
+Search the project directory for the supplied Lynch Physiotherapy & Wellness logo and use it in:
+- Header
+- Footer
+
+Create a sensible assets structure if one does not exist:
+
+public/
+  images/
+    logo.*
+    hero-physio.*
+    clinic-room.*
+    cta-background.*
+
+Do not generate a fake replacement logo if the existing logo asset is present.
+
+If appropriate image assets are not yet supplied, use temporary high-quality placeholder images and clearly name them so they can easily be replaced later.
+
+RESPONSIVE BEHAVIOUR
+
+Desktop 1200px+:
+- Full navigation.
+- 2-column hero.
+- 3-column service/testimonial grids.
+
+Tablet 768px–1199px:
+- Reduce hero heading.
+- Still allow 2-column hero where space permits.
+- Service grid 2 columns.
+- Footer 2 columns.
+
+Mobile under 768px:
+- Hamburger nav.
+- Hero stacks text above image.
+- Buttons either stacked or full-width.
+- Icon benefits can become vertical or 3 narrow columns if readable.
+- All card grids 1 column.
+- About image underneath text.
+- CTA stacks.
+- Footer single column or 2 compact columns.
+- Ensure no horizontal overflow.
+
+ACCESSIBILITY
+
+- Proper heading hierarchy.
+- Alt text for images.
+- Visible focus styles.
+- Buttons and links keyboard accessible.
+- Minimum 44px touch targets.
+- Colour contrast suitable for WCAG AA.
+- Form labels should not rely only on placeholders.
+- Mobile menu should support keyboard navigation and Escape closing.
+
+SEO
+
+Add metadata:
+Title:
+“Lynch Physiotherapy & Wellness | Chartered Physiotherapist in Birstall”
+
+Description:
+“Personalised physiotherapy, rehabilitation and wellbeing support from Lynch Physiotherapy & Wellness in Birstall, Batley.”
+
+Add suitable OpenGraph metadata structure.
+
+PERFORMANCE
+
+- Optimise images.
+- Lazy-load below-the-fold images.
+- Avoid large unnecessary animation libraries.
+- Use CSS transitions for subtle motion.
+- Aim for very good Lighthouse scores.
+
+FINAL VISUAL TARGET
+
+The site should feel very close to the supplied concept:
+- crisp white background
+- deep navy headings
+- distinctive Lynch teal
+- generous spacing
+- rounded clinical imagery
+- polished service cards
+- clear appointment CTAs
+- reassuring but premium visual tone
+
+It should feel like a real £2,000–£5,000 custom-designed private physiotherapy website rather than a generic template.

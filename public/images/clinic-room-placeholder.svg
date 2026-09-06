@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFF3F4"/>
+      <stop offset="100%" stop-color="#B9E4E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1000" fill="url(#g2)"/>
+  <rect x="60" y="60" width="1080" height="880" rx="24" fill="#FFFFFF" opacity="0.5"/>
+  <!-- treatment bed -->
+  <rect x="140" y="620" width="520" height="120" rx="16" fill="#127A81" opacity="0.85"/>
+  <rect x="140" y="600" width="140" height="60" rx="14" fill="#0B6E75"/>
+  <!-- plant -->
+  <rect x="960" y="700" width="70" height="90" rx="8" fill="#00646C"/>
+  <circle cx="995" cy="660" r="60" fill="#2FAE86" opacity="0.9"/>
+  <circle cx="950" cy="690" r="40" fill="#2FAE86" opacity="0.8"/>
+  <circle cx="1040" cy="690" r="40" fill="#2FAE86" opacity="0.8"/>
+  <!-- skeleton/spine model -->
+  <circle cx="820" cy="420" r="26" fill="#092C3C" opacity="0.7"/>
+  <path d="M820 446 L820 620" stroke="#092C3C" stroke-width="8" opacity="0.7"/>
+  <path d="M796 470 L844 470 M792 500 L848 500 M796 530 L844 530 M800 560 L840 560 M804 590 L836 590" stroke="#092C3C" stroke-width="6" opacity="0.6"/>
+  <!-- anatomy poster -->
+  <rect x="180" y="140" width="220" height="300" rx="10" fill="#FFFFFF" stroke="#0B6E75" stroke-width="4"/>
+  <path d="M290 190 L290 420 M250 230 L330 230 M245 280 L335 280 M255 330 L325 330" stroke="#0B6E75" stroke-width="4" opacity="0.7"/>
+  <text x="600" y="900" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#00535A" opacity="0.85">CLINIC ROOM IMAGE PLACEHOLDER</text>
+  <text x="600" y="935" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00646C" opacity="0.7">Replace: public/images/clinic-room.jpg</text>
+</svg>

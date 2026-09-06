@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_WEB3FORMS_KEY: aa412916-ce73-4fba-8a67-e3bcddc831fc
+    restart: unless-stopped
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro

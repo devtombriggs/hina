@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B6E75"/>
+      <stop offset="55%" stop-color="#127A81"/>
+      <stop offset="100%" stop-color="#1C9298"/>
+    </linearGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#g1)"/>
+  <rect width="1200" height="1400" fill="url(#dots)"/>
+  <g opacity="0.9" stroke="#EFFAFB" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- simple line figure: physio treating a knee -->
+    <circle cx="430" cy="430" r="46" fill="#EFFAFB" stroke="none"/>
+    <path d="M430 480 L410 640 L380 780" />
+    <path d="M430 480 L520 610 L560 760" />
+    <path d="M400 640 L300 700" />
+    <path d="M470 610 L610 560" />
+    <circle cx="760" cy="760" r="40" fill="#EFFAFB" stroke="none"/>
+    <path d="M760 800 L700 940 L650 1080" />
+    <path d="M760 800 L860 930 L830 1080" />
+    <path d="M690 950 Q650 970 610 940" />
+  </g>
+  <text x="600" y="1230" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#EFFAFB" opacity="0.85">HERO IMAGE PLACEHOLDER</text>
+  <text x="600" y="1270" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#DFF3F4" opacity="0.7">Replace: public/images/hero-physio.jpg</text>
+  <text x="600" y="1300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#DFF3F4" opacity="0.6">Suggested: physiotherapist treating a patient's knee/leg</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npm install *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(cp /tmp/icon_32.png /home/tom/Documents/applications/hina_webiste/src/app/icon.png)",
+      "Bash(cp /tmp/icon_180.png /home/tom/Documents/applications/hina_webiste/src/app/apple-icon.png)",
+      "Bash(cp /tmp/icon_512.png /home/tom/Documents/applications/hina_webiste/public/images/icon-512.png)",
+      "Bash(npm run *)"
+    ]
+  }
+}
