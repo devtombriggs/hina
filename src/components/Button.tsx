@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { handleHashLinkClick } from "@/lib/scroll";
 
 type ButtonVariant = "primary" | "secondary" | "white";
 
@@ -66,6 +69,13 @@ export default function Button(props: ButtonProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
+          {content}
+        </a>
+      );
+    }
+    if (props.href.startsWith("#")) {
+      return (
+        <a href={props.href} className={classes} onClick={handleHashLinkClick(props.href)}>
           {content}
         </a>
       );

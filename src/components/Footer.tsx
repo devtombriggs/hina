@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import { handleHashLinkClick } from "@/lib/scroll";
 
 function FacebookIcon() {
   return (
@@ -48,6 +51,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
+                    onClick={handleHashLinkClick(item.href)}
                     className="text-text-secondary text-sm hover:text-brand-teal transition-colors duration-200"
                   >
                     {item.label}

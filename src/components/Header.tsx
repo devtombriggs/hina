@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Calendar, Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import { handleHashLinkClick } from "@/lib/scroll";
 import Button from "./Button";
 
 export default function Header() {
@@ -63,7 +63,12 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] px-[18px] md:px-8 lg:px-16 h-20 flex items-center justify-between">
-        <Link href="#home" className="flex items-center shrink-0" aria-label={`${siteConfig.businessName} home`}>
+        <a
+          href="#home"
+          onClick={handleHashLinkClick("#home")}
+          className="flex items-center shrink-0"
+          aria-label={`${siteConfig.businessName} home`}
+        >
           <Image
             src="/images/logo.png"
             alt={siteConfig.businessName}
@@ -72,7 +77,7 @@ export default function Header() {
             className="h-12 md:h-14 w-auto object-contain"
             priority
           />
-        </Link>
+        </a>
 
         <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
           {siteConfig.nav.map((item) => {
@@ -81,6 +86,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={handleHashLinkClick(item.href)}
                 aria-current={isActive ? "page" : undefined}
                 className={`relative py-2 text-[15px] font-medium transition-colors duration-200 ${
                   isActive ? "text-brand-teal" : "text-text-primary hover:text-brand-teal"
@@ -125,7 +131,10 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={closeMenu}
+                onClick={(e) => {
+                  handleHashLinkClick(item.href)(e);
+                  closeMenu();
+                }}
                 className="py-3.5 text-lg font-medium text-text-primary border-b border-border-light last:border-none"
               >
                 {item.label}
