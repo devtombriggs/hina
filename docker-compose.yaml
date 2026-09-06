@@ -5,8 +5,8 @@ services:
       args:
         NEXT_PUBLIC_WEB3FORMS_KEY: aa412916-ce73-4fba-8a67-e3bcddc831fc
     restart: unless-stopped
-    expose:
-      - "3000"
+    ports:
+      - "127.0.0.1:8089:3000"
 
   nginx:
     image: nginx:alpine
