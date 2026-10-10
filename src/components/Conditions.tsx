@@ -19,7 +19,7 @@ export default function Conditions() {
         </div>
 
         <p className="mt-10 text-center text-text-secondary max-w-xl mx-auto leading-relaxed">
-          If you&apos;re unsure whether physiotherapy can help, get in touch and we&apos;ll be
+          If you&apos;r unsure whether physiotherapy can help, get in touch and we&apos;ll be
           happy to advise.
         </p>
       </div>
