@@ -12,7 +12,7 @@ pipeline {
                     } else if (env.BRANCH_NAME.startsWith('dev/')) {
                         sh 'echo this is a dev branch'
                     } else if (env.BRANCH_NAME == 'destroy') {
-                        ssh 'docker compose down'
+                        sh 'docker compose down'
                     } else {
                         sh 'echo branch does not match main or dev'
                     } 
